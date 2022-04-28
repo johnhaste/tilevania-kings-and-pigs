@@ -12,8 +12,6 @@ public class HammerAttack : MonoBehaviour
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         player = FindObjectOfType<KingMovement>();
-        //transform.localScale = new Vector2(player.transform.localScale.x, transform.localScale.y);
-        Debug.Log(player.transform.localScale.x);
         transform.localScale = new Vector2(player.transform.localScale.x, 1f);
         StartCoroutine(Disappear());
     }
@@ -25,7 +23,7 @@ public class HammerAttack : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col){
         if(col.tag == "Enemy"){
-            Destroy(col.gameObject);
+            col.GetComponent<EnemyMovementPig>().Dies();
         }   
     }
 }

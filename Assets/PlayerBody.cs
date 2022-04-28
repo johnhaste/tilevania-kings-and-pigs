@@ -8,7 +8,7 @@ public class PlayerBody : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col){
         
-        if(col.tag == "Enemy"){
+        if(col.tag == "Enemy" && col.GetComponent<EnemyMovementPig>().isAlive){
             if(!player.isFlashing){
                 //Debug.Log("Leva Dano");
                 player.ThrowPlayer();  
