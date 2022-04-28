@@ -9,8 +9,8 @@ public class KingMovement : MonoBehaviour
     [SerializeField] float jumpSpeed = 20f;
     [SerializeField] float climbSpeed = 5f;
     [SerializeField] Vector2 deathKick = new Vector2(20f,20f);
-    [SerializeField] GameObject bullet;
-    //[SerializeField] Transform gun;
+    [SerializeField] GameObject hammerAttack;
+    [SerializeField] Transform hammer;
 
     float playerGravity;
     bool isAlive;
@@ -114,11 +114,18 @@ public class KingMovement : MonoBehaviour
         }
     }
 
-    /*void OnFire(InputValue value){
+    void OnFire(InputValue value){
         if(!isAlive){return;}
+        Debug.Log("Attack");
+        myAnimator.SetBool("isAttacking", true);
+        StartCoroutine(FinishAttack());
+        Instantiate(hammerAttack, hammer.position, transform.rotation);
+    }
 
-        Instantiate(bullet, gun.position, transform.rotation);
-    }*/
+    IEnumerator FinishAttack(){
+        yield return new WaitForSecondsRealtime(0.2f);
+        myAnimator.SetBool("isAttacking", false);
+    }
 
     void Die(){
         if(myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards")))

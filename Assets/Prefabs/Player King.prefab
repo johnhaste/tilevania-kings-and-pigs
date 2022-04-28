@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 295943698230508073}
   m_Layer: 8
-  m_Name: Gun
+  m_Name: Hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4701257570570045080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.32, y: -0.22, z: 0}
+  m_LocalPosition: {x: 0.689, y: -0.008, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8567260818693574862}
@@ -221,7 +221,8 @@ MonoBehaviour:
   jumpSpeed: 20
   climbSpeed: 5
   deathKick: {x: 20, y: 20}
-  bullet: {fileID: 0}
+  hammerAttack: {fileID: 4420509859999880448, guid: cc4a33ed5f6f4b74b8741633f6035954, type: 3}
+  hammer: {fileID: 295943698230508073}
 --- !u!61 &518925333
 BoxCollider2D:
   m_ObjectHideFlags: 0
