@@ -2978,17 +2978,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8567260818693574856, guid: b29de9b829cede54c81c2b7d9bbb442a, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: cb1a1285baa217a41ae81e982fec68cb, type: 2}
     - target: {fileID: 8567260818693574859, guid: b29de9b829cede54c81c2b7d9bbb442a, type: 3}
       propertyPath: m_Name
       value: Player King
-      objectReference: {fileID: 0}
-    - target: {fileID: 8567260818693574859, guid: b29de9b829cede54c81c2b7d9bbb442a, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8567260818693574862, guid: b29de9b829cede54c81c2b7d9bbb442a, type: 3}
       propertyPath: m_RootOrder

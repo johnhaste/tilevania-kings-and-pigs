@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6251692610085914692}
   - component: {fileID: 6145807065221006920}
   - component: {fileID: 7116860173842332239}
-  - component: {fileID: 5184773477325882477}
+  - component: {fileID: 493827528651256983}
   - component: {fileID: 518925333}
   m_Layer: 8
   m_Name: Player King
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &5184773477325882477
+--- !u!114 &493827528651256983
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,15 +214,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8567260818693574859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd8b8092e1b944548b533d7940410624, type: 3}
+  m_Script: {fileID: 11500000, guid: 29745166168c8e64281b12cf5f89e7ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 7
+  runSpeed: 10
   jumpSpeed: 20
   climbSpeed: 5
   deathKick: {x: 20, y: 20}
-  bullet: {fileID: 4337339933058405551, guid: fb64a53f85bec504c97f695875b2d775, type: 3}
-  gun: {fileID: 295943698230508073}
+  bullet: {fileID: 0}
 --- !u!61 &518925333
 BoxCollider2D:
   m_ObjectHideFlags: 0
