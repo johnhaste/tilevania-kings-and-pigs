@@ -13,10 +13,9 @@ public class KingMovement : MonoBehaviour
     [SerializeField] Transform hammer;
 
     float playerGravity;
-    int playerHearts = 3;
+    [SerializeField] public int playerHearts = 3;
     bool isAlive;
-    bool isFlashing = false;
-
+    public bool isFlashing;
 
     Vector2 moveInput;
     Rigidbody2D myRigidBody;
@@ -32,7 +31,8 @@ public class KingMovement : MonoBehaviour
         playerGravity = myRigidBody.gravityScale;
         myAnimator = GetComponent<Animator>();
         myCapsuleCollider  = GetComponent<CapsuleCollider2D>();
-        myFeetCollider = GetComponent<BoxCollider2D>();
+        myFeetCollider = GameObject.FindGameObjectWithTag("PlayerFeet").GetComponent<BoxCollider2D>();
+        FindObjectOfType<GameSession>().UpdateHearts(playerHearts);
     }
 
     // Update is called once per frame
@@ -90,8 +90,6 @@ public class KingMovement : MonoBehaviour
         myAnimator.SetBool("isRunning", true);
     }
 
-    
-
     void OnJump(InputValue value){
 
         //If not touching the groud
@@ -119,7 +117,6 @@ public class KingMovement : MonoBehaviour
 
     void OnFire(InputValue value){
         if(!isAlive){return;}
-        Debug.Log("Attack");
         myAnimator.SetBool("isAttacking", true);
         StartCoroutine(FinishAttack());
         Instantiate(hammerAttack, hammer.position, transform.rotation);
@@ -131,13 +128,38 @@ public class KingMovement : MonoBehaviour
     }
 
     void Die(){
-        if(myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards")))
+        if(myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")) || playerHearts <= 0)
         {
+            FindObjectOfType<GameSession>().UpdateHearts(0);
             isAlive = false;
             myAnimator.SetTrigger("Dying");
-            myRigidBody.velocity = deathKick;
+            ThrowPlayer();
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
 
+    }
+    public void ThrowPlayer(){
+        if(playerHearts > 0)
+            myRigidBody.velocity = deathKick;
+    }
+
+    public IEnumerator Flash(){
+        isFlashing = true;
+        //How long it flashes
+        float flashDuration = 0.2f;
+
+        //Get the SpriteRenderer Component
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        
+        //Start flashing
+        spriteRenderer.enabled = false;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.enabled = true;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.enabled = false;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.enabled = true;
+
+        isFlashing = false;
     }
 }

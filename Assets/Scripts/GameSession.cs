@@ -9,11 +9,12 @@ using UnityEngine.UI;
 public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
-    [SerializeField] int playerHearts = 3;
     [SerializeField] int coins = 0;
 
     [SerializeField] TextMeshProUGUI livesText;
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] Image livesBar;
+    [SerializeField] Sprite[] livesBarFrames;
 
     void Awake()
     {
@@ -46,6 +47,14 @@ public class GameSession : MonoBehaviour
         
         livesText.text = playerLives.ToString();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void UpdateHearts(int playerHearts){
+        //Debug.Log("Update heart:" + playerHearts);
+        if(playerHearts > 0){
+           playerHearts--;
+        }        
+        livesBar.sprite = livesBarFrames[playerHearts+1];
     }
 
     public void AddCoin(int pointsToAdd){

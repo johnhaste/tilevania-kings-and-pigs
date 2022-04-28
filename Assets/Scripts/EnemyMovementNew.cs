@@ -7,7 +7,7 @@ public class EnemyMovementNew : MonoBehaviour
     [SerializeField] float moveSpeed = 1f;
     Rigidbody2D myRigidBody;
     Animator myAnimator;
-
+    [SerializeField] Vector2 deathKick = new Vector2(20f,20f);
 
     void Start()
     {
@@ -21,8 +21,10 @@ public class EnemyMovementNew : MonoBehaviour
     }
 
     void OnTriggerExit2D(Collider2D other){
-        moveSpeed = -moveSpeed;
-        FlipEnemyFacing();
+        if(other.tag != "Player" && other.tag != "PlayerFeet" && other.tag != "PlayerBody"){
+            moveSpeed = -moveSpeed;
+            FlipEnemyFacing();
+        }        
     }
 
     void FlipEnemyFacing(){
