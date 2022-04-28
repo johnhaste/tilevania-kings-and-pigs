@@ -337,11 +337,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!4 &28978942 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 295943698230508073, guid: b29de9b829cede54c81c2b7d9bbb442a, type: 3}
-  m_PrefabInstance: {fileID: 1136004933}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &530691339 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5263404555703789069, guid: 1957f508d48d0354ca54d469dc4defb1, type: 3}
@@ -2983,14 +2978,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 493827528651256983, guid: b29de9b829cede54c81c2b7d9bbb442a, type: 3}
-      propertyPath: hammer
-      value: 
-      objectReference: {fileID: 28978942}
-    - target: {fileID: 493827528651256983, guid: b29de9b829cede54c81c2b7d9bbb442a, type: 3}
-      propertyPath: hammerAttack
-      value: 
-      objectReference: {fileID: 4420509859999880448, guid: cc4a33ed5f6f4b74b8741633f6035954, type: 3}
     - target: {fileID: 8567260818693574859, guid: b29de9b829cede54c81c2b7d9bbb442a, type: 3}
       propertyPath: m_Name
       value: Player King

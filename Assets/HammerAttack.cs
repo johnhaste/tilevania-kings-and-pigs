@@ -22,4 +22,10 @@ public class HammerAttack : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.1f);
         Destroy(gameObject);
     }
+
+    void OnTriggerEnter2D(Collider2D col){
+        if(col.tag == "Enemy"){
+            Destroy(col.gameObject);
+        }
+    }
 }
