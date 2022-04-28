@@ -130,7 +130,8 @@ public class KingMovement : MonoBehaviour
     void Die(){
         if(myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")) || playerHearts <= 0)
         {
-            FindObjectOfType<GameSession>().UpdateHearts(0);
+            playerHearts = 0;
+            FindObjectOfType<GameSession>().UpdateHearts(playerHearts);
             isAlive = false;
             myAnimator.SetTrigger("Dying");
             ThrowPlayer();

@@ -28,7 +28,7 @@ public class GameSession : MonoBehaviour
     }
 
     void Start(){
-        livesText.text = playerLives.ToString();
+        livesText.text = "x " + playerLives.ToString();
         scoreText.text = coins.ToString();
     }
 
@@ -45,7 +45,7 @@ public class GameSession : MonoBehaviour
         yield return new WaitForSecondsRealtime(2f);
         playerLives--;
         
-        livesText.text = playerLives.ToString();
+        livesText.text = "x " + playerLives.ToString();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
