@@ -13,7 +13,10 @@ public class KingMovement : MonoBehaviour
     [SerializeField] Transform hammer;
 
     float playerGravity;
+    int playerHearts = 3;
     bool isAlive;
+    bool isFlashing = false;
+
 
     Vector2 moveInput;
     Rigidbody2D myRigidBody;
@@ -135,5 +138,6 @@ public class KingMovement : MonoBehaviour
             myRigidBody.velocity = deathKick;
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
+
     }
 }

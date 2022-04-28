@@ -26,6 +26,6 @@ public class HammerAttack : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col){
         if(col.tag == "Enemy"){
             Destroy(col.gameObject);
-        }
+        }   
     }
 }

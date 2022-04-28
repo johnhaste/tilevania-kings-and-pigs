@@ -222,6 +222,7 @@ MonoBehaviour:
   climbSpeed: 5
   deathKick: {x: 20, y: 20}
   hammerAttack: {fileID: 4420509859999880448, guid: cc4a33ed5f6f4b74b8741633f6035954, type: 3}
+  body: {fileID: 0}
   hammer: {fileID: 295943698230508073}
 --- !u!61 &518925333
 BoxCollider2D:
