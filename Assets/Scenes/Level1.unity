@@ -9214,6 +9214,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 137063821, guid: a17c456652a598d4d9003e77700d5922, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -37
+      objectReference: {fileID: 0}
     - target: {fileID: 1556404577445783002, guid: a17c456652a598d4d9003e77700d5922, type: 3}
       propertyPath: m_Name
       value: Game Session
@@ -9262,6 +9266,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1556404577445783005, guid: a17c456652a598d4d9003e77700d5922, type: 3}
+      propertyPath: livesBar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556404577445783005, guid: a17c456652a598d4d9003e77700d5922, type: 3}
+      propertyPath: livesBarFrames.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556404577445783005, guid: a17c456652a598d4d9003e77700d5922, type: 3}
+      propertyPath: livesBarFrames.Array.data[0]
+      value: 
+      objectReference: {fileID: 6276512137793794730, guid: 0678b9e858ac8414f88e9b76014b9fe4, type: 3}
+    - target: {fileID: 1556404577445783005, guid: a17c456652a598d4d9003e77700d5922, type: 3}
+      propertyPath: livesBarFrames.Array.data[1]
+      value: 
+      objectReference: {fileID: 2719003957910078481, guid: 0678b9e858ac8414f88e9b76014b9fe4, type: 3}
+    - target: {fileID: 1556404577445783005, guid: a17c456652a598d4d9003e77700d5922, type: 3}
+      propertyPath: livesBarFrames.Array.data[2]
+      value: 
+      objectReference: {fileID: -5361912048035087808, guid: 0678b9e858ac8414f88e9b76014b9fe4, type: 3}
+    - target: {fileID: 1556404577445783005, guid: a17c456652a598d4d9003e77700d5922, type: 3}
+      propertyPath: livesBarFrames.Array.data[3]
+      value: 
+      objectReference: {fileID: -2358927615985880026, guid: 0678b9e858ac8414f88e9b76014b9fe4, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a17c456652a598d4d9003e77700d5922, type: 3}
 --- !u!1001 &3413989173006215946

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 
 public class GameSession : MonoBehaviour
@@ -41,6 +42,7 @@ public class GameSession : MonoBehaviour
     IEnumerator TakeLife(){
         yield return new WaitForSecondsRealtime(2f);
         playerLives--;
+        
         livesText.text = playerLives.ToString();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
