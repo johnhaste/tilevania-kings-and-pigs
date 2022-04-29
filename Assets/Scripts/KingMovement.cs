@@ -34,7 +34,7 @@ public class KingMovement : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         myCapsuleCollider  = GetComponent<CapsuleCollider2D>();
         myFeetCollider = GameObject.FindGameObjectWithTag("PlayerFeet").GetComponent<BoxCollider2D>();
-        FindObjectOfType<GameSession>().UpdateHearts(playerHearts);
+       
     }
 
     public void EnterDoor(){
@@ -47,6 +47,7 @@ public class KingMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        FindObjectOfType<GameSession>().UpdateHearts(playerHearts);
         if(!isAlive || isEnteringDoor){return;}
         //Always updates the player horizontal velocity
         Run();
@@ -140,7 +141,7 @@ public class KingMovement : MonoBehaviour
     void Die(){
         if(myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")) || playerHearts <= 0)
         {
-            playerHearts = 0;
+            playerHearts = -1;
             FindObjectOfType<GameSession>().UpdateHearts(playerHearts);
             isAlive = false;
             myAnimator.SetTrigger("Dying");

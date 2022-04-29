@@ -68,10 +68,10 @@ public class GameSession : MonoBehaviour
     }
 
     void ResetGameSession(){
+        UpdateHearts(3);
         FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene(0);
         Destroy(gameObject);
     }
-
 
 }
