@@ -23,6 +23,8 @@ public class KingMovement : MonoBehaviour
     Animator myAnimator;
     CapsuleCollider2D myCapsuleCollider;
     BoxCollider2D myFeetCollider;
+    [SerializeField] AudioClip hammerAttackSFX;
+    [SerializeField] AudioClip openDoorSFX;
 
     void Start()
     {
@@ -38,6 +40,7 @@ public class KingMovement : MonoBehaviour
 
     public void EnterDoor(){
         isEnteringDoor = true;
+        AudioSource.PlayClipAtPoint(openDoorSFX, Camera.main.transform.position);
         myAnimator.SetTrigger("EnteringDoor");
     }
 
@@ -123,6 +126,7 @@ public class KingMovement : MonoBehaviour
 
     void OnFire(InputValue value){
         if(!isAlive){return;}
+        AudioSource.PlayClipAtPoint(hammerAttackSFX, Camera.main.transform.position);
         myAnimator.SetBool("isAttacking", true);
         StartCoroutine(FinishAttack());
         Instantiate(hammerAttack, hammer.position, transform.rotation);

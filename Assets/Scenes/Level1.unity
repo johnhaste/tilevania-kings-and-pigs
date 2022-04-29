@@ -2780,6 +2780,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 493827528651256983, guid: b29de9b829cede54c81c2b7d9bbb442a, type: 3}
+      propertyPath: openDoorSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 045c957258f894c45802a2f7ffa0e359, type: 3}
+    - target: {fileID: 493827528651256983, guid: b29de9b829cede54c81c2b7d9bbb442a, type: 3}
+      propertyPath: hammerAttackSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 458e96542be060246acfec5fbb61bca7, type: 3}
     - target: {fileID: 8567260818693574859, guid: b29de9b829cede54c81c2b7d9bbb442a, type: 3}
       propertyPath: m_Name
       value: Player King
@@ -3083,7 +3091,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 493827528651256983, guid: b29de9b829cede54c81c2b7d9bbb442a, type: 3}
   m_PrefabInstance: {fileID: 1136004933}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1644903098}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29745166168c8e64281b12cf5f89e7ac, type: 3}
@@ -3338,6 +3346,107 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &1644903098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8567260818693574859, guid: b29de9b829cede54c81c2b7d9bbb442a, type: 3}
+  m_PrefabInstance: {fileID: 1136004933}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1644903104
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644903098}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1663473564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8622,6 +8731,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 974234829, guid: a17c456652a598d4d9003e77700d5922, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1556404577445783002, guid: a17c456652a598d4d9003e77700d5922, type: 3}
       propertyPath: m_Name
       value: Game Session
@@ -8670,22 +8783,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2423913151749612587, guid: a17c456652a598d4d9003e77700d5922, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -64
-      objectReference: {fileID: 0}
-    - target: {fileID: 2423913151749612587, guid: a17c456652a598d4d9003e77700d5922, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6916345080723481436, guid: a17c456652a598d4d9003e77700d5922, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6916345080723481436, guid: a17c456652a598d4d9003e77700d5922, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -5
-      objectReference: {fileID: 0}
+    - target: {fileID: 1556404577445783005, guid: a17c456652a598d4d9003e77700d5922, type: 3}
+      propertyPath: BGMusic1
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e54a10b307a06046a118743e4022799, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a17c456652a598d4d9003e77700d5922, type: 3}
 --- !u!1001 &5272353802062587286
