@@ -8,6 +8,8 @@ TagManager:
   - EndDoor
   - PlayerFeet
   - PlayerBody
+  - ExtraLive
+  - Coin
   layers:
   - Default
   - TransparentFX

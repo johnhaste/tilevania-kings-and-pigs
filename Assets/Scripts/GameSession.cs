@@ -62,6 +62,11 @@ public class GameSession : MonoBehaviour
         scoreText.text = coins.ToString();
     }
 
+    public void AddLive(){
+        playerLives++;
+        livesText.text = "x " + playerLives.ToString();
+    }
+
     void ResetGameSession(){
         FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene(0);
