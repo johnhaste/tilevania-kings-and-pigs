@@ -8223,14 +8223,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 517230033, guid: a17c456652a598d4d9003e77700d5922, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 230.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 861654392, guid: a17c456652a598d4d9003e77700d5922, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 243.6
-      objectReference: {fileID: 0}
     - target: {fileID: 1556404577445783002, guid: a17c456652a598d4d9003e77700d5922, type: 3}
       propertyPath: m_Name
       value: Game Session
