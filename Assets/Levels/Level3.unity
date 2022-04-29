@@ -2227,6 +2227,7 @@ GameObject:
   - component: {fileID: 699176788}
   - component: {fileID: 699176789}
   - component: {fileID: 699176790}
+  - component: {fileID: 699176791}
   m_Layer: 8
   m_Name: ExtraLive
   m_TagString: ExtraLive
@@ -2339,6 +2340,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinPickupSFX: {fileID: 8300000, guid: 0465dd9a9056afc42acea3a4ac823ba1, type: 3}
   pointsForPickup: 0
+--- !u!95 &699176791
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699176786}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 59d50eceec45a7c4a98f53461a56f184, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &806686419
 GameObject:
   m_ObjectHideFlags: 0
