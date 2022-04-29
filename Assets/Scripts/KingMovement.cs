@@ -30,7 +30,6 @@ public class KingMovement : MonoBehaviour
     {
         isAlive = true;
         myRigidBody = GetComponent<Rigidbody2D>();
-        //Gets current gravity
         playerGravity = myRigidBody.gravityScale;
         myAnimator = GetComponent<Animator>();
         myCapsuleCollider  = GetComponent<CapsuleCollider2D>();
@@ -39,6 +38,7 @@ public class KingMovement : MonoBehaviour
     }
 
     public void EnterDoor(){
+        myRigidBody.velocity = new Vector2(0f, 0f);
         isEnteringDoor = true;
         AudioSource.PlayClipAtPoint(openDoorSFX, Camera.main.transform.position);
         myAnimator.SetTrigger("EnteringDoor");
