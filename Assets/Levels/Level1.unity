@@ -419,7 +419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 91531793}
   - component: {fileID: 91531794}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: wasd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
