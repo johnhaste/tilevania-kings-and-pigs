@@ -10,6 +10,7 @@ TagManager:
   - PlayerBody
   - ExtraLive
   - Coin
+  - Tutorial1
   layers:
   - Default
   - TransparentFX
