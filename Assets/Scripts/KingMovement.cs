@@ -15,6 +15,7 @@ public class KingMovement : MonoBehaviour
     float playerGravity;
     [SerializeField] public int playerHearts = 3;
     bool isAlive;
+    bool isEnteringDoor = false;
     public bool isFlashing;
 
     Vector2 moveInput;
@@ -35,10 +36,15 @@ public class KingMovement : MonoBehaviour
         FindObjectOfType<GameSession>().UpdateHearts(playerHearts);
     }
 
+    public void EnterDoor(){
+        isEnteringDoor = true;
+        myAnimator.SetTrigger("EnteringDoor");
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if(!isAlive){return;}
+        if(!isAlive || isEnteringDoor){return;}
         //Always updates the player horizontal velocity
         Run();
         ClimbLadder();

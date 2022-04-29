@@ -8,25 +8,25 @@ public class LevelExit : MonoBehaviour
 
     int currentSceneIndex;
     int nextSceneIndex;
-
-
-    [SerializeField] Sprite openedDor;
-    SpriteRenderer mySpriteRenderer;
+    Animator myAnimator;
+    KingMovement player;
 
     void Start(){
-        mySpriteRenderer = GetComponent<SpriteRenderer>();
+        myAnimator = GetComponent<Animator>();
+        player = FindObjectOfType<KingMovement>();
     }
 
     void OnTriggerEnter2D(Collider2D col){
         
         if(col.tag == "Player"){
-            mySpriteRenderer.sprite = openedDor;
+            myAnimator.SetTrigger("Opening");
+            player.EnterDoor();
             StartCoroutine(LoadNextLevel());
        }
     }
 
     IEnumerator LoadNextLevel(){
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(1f);
 
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         nextSceneIndex = currentSceneIndex + 1;
