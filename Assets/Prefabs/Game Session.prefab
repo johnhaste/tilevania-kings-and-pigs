@@ -709,7 +709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec468ccccbaa9d46aa40fbebeac76dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLives: 3
+  playerLives: 5
   coins: 0
   livesText: {fileID: 1993106886}
   scoreText: {fileID: 861654393}
@@ -719,9 +719,6 @@ MonoBehaviour:
   - {fileID: 2719003957910078481, guid: 0678b9e858ac8414f88e9b76014b9fe4, type: 3}
   - {fileID: -5361912048035087808, guid: 0678b9e858ac8414f88e9b76014b9fe4, type: 3}
   - {fileID: -2358927615985880026, guid: 0678b9e858ac8414f88e9b76014b9fe4, type: 3}
-  tutorial1: {fileID: 0}
-  tutorial2: {fileID: 0}
-  tutorial3: {fileID: 0}
 --- !u!82 &974234829
 AudioSource:
   m_ObjectHideFlags: 0

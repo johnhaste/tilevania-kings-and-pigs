@@ -176,7 +176,7 @@ public class KingMovement : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D col){
-        if(col.tag == "FallingPlatform"){
+        if(col.tag == "FallingPlatform" && gameObject.transform.position.y > col.transform.position.y){
             Wait(2f);
             col.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         }
