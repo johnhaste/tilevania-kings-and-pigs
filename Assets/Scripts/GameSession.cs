@@ -15,9 +15,6 @@ public class GameSession : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] Image livesBar;
     [SerializeField] Sprite[] livesBarFrames;
-    [SerializeField] GameObject tutorial1;
-    [SerializeField] GameObject tutorial2;
-    [SerializeField] GameObject tutorial3;
 
     void Awake()
     {
@@ -29,11 +26,6 @@ public class GameSession : MonoBehaviour
         }
 
         Scene scene = SceneManager.GetActiveScene();
-        if(scene.name != "Level1"){
-            Debug.Log("Not Level1");
-            Destroy(GameObject.FindWithTag("Tutorial1"));
-        }
-
     }
 
     void Start(){

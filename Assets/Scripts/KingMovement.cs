@@ -174,4 +174,15 @@ public class KingMovement : MonoBehaviour
 
         isFlashing = false;
     }
+
+    void OnTriggerEnter2D(Collider2D col){
+        if(col.tag == "FallingPlatform"){
+            Wait(2f);
+            col.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        }
+    }
+
+    public IEnumerator Wait(float seconds){
+        yield return new WaitForSeconds(seconds);
+    }
 }
