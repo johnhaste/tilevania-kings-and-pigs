@@ -33,6 +33,10 @@ public class GameSession : MonoBehaviour
         scoreText.text = coins.ToString();
     }
 
+    public void Restart(){
+        SceneManager. LoadScene(SceneManager. GetActiveScene().name);
+    }
+
     public void ProcessPlayerDeath(){
         if(playerLives > 1){
             StartCoroutine(TakeLife());
