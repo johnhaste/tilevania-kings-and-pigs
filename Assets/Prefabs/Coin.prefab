@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -988988171
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: -2080440546571199364, guid: 4693bbf3282d76049a5717ece5ac5e80, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532c489cd79078047b162badb86ffc52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickupSFX: {fileID: 8300000, guid: 0465dd9a9056afc42acea3a4ac823ba1, type: 3}
+  currentPickupSFX: {fileID: 8300000, guid: 0465dd9a9056afc42acea3a4ac823ba1, type: 3}
   pointsForPickup: 100
 --- !u!82 &815539260
 AudioSource:

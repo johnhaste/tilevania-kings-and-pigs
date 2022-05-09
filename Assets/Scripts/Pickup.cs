@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 public class Pickup : MonoBehaviour
 {
 
-    [SerializeField] AudioClip coinPickupSFX;
+    [SerializeField] AudioClip currentPickupSFX;
     [SerializeField] int pointsForPickup = 100;
 
     bool wasCollected = false;
@@ -17,12 +17,12 @@ public class Pickup : MonoBehaviour
             if(gameObject.tag == "Coin"){
                 wasCollected = true;
                 FindObjectOfType<GameSession>().AddCoin(pointsForPickup);
-                AudioSource.PlayClipAtPoint(coinPickupSFX, Camera.main.transform.position);
+                AudioSource.PlayClipAtPoint(currentPickupSFX, Camera.main.transform.position);
                 Destroy(gameObject);
             }else if(gameObject.tag == "ExtraLive"){
                 wasCollected = true;
                 FindObjectOfType<GameSession>().AddLive();
-                AudioSource.PlayClipAtPoint(coinPickupSFX, Camera.main.transform.position);
+                AudioSource.PlayClipAtPoint(currentPickupSFX, Camera.main.transform.position);
                 Destroy(gameObject);
             }
            
