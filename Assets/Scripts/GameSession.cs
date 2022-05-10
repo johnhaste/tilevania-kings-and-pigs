@@ -32,6 +32,13 @@ public class GameSession : MonoBehaviour
     void Start(){
         livesText.text = "x " + playerLives.ToString();
         scoreText.text = coins.ToString();
+        finalScoreText.text = "";
+    }
+
+    public void CleanScore(){
+        finalScoreText.text = "";
+        coins = 0;
+        playerLives = 5;
     }
 
     public void Restart(){
