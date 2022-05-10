@@ -13,6 +13,7 @@ public class GameSession : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI livesText;
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] TextMeshProUGUI finalScoreText;
     [SerializeField] Image livesBar;
     [SerializeField] Sprite[] livesBarFrames;
 
@@ -77,6 +78,10 @@ public class GameSession : MonoBehaviour
         FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene(0);
         Destroy(gameObject);
+    }
+
+    public void UpdateFinalScore(){
+        finalScoreText.text = "Final Score:" + (coins + (playerLives * 500));
     }
 
 }

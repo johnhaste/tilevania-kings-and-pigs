@@ -27,7 +27,7 @@ public class EnemyMovementPig : MonoBehaviour
     }
 
     void OnTriggerExit2D(Collider2D other){
-        if(other.tag != "Player" && other.tag != "PlayerFeet" && other.tag != "PlayerBody"){
+        if(other.tag != "Player" && other.tag != "PlayerFeet" && other.tag != "PlayerBody" && other.tag != "Coin"){
             moveSpeed = -moveSpeed;
             FlipEnemyFacing();
         }        
