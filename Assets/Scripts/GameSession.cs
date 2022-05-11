@@ -42,7 +42,7 @@ public class GameSession : MonoBehaviour
     }
 
     public void Restart(){
-        SceneManager. LoadScene(SceneManager. GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager. GetActiveScene().name);
     }
 
     public void ProcessPlayerDeath(){
@@ -50,7 +50,7 @@ public class GameSession : MonoBehaviour
             StartCoroutine(TakeLife());
             TakeLife();
         }else{
-            ResetGameSession();
+            StartCoroutine("ResetGameSession");
         }
     }
 
@@ -80,12 +80,15 @@ public class GameSession : MonoBehaviour
         livesText.text = "x " + playerLives.ToString();
     }
 
-    void ResetGameSession(){
+    IEnumerator ResetGameSession(){
+        yield return new WaitForSeconds(3f);
         UpdateHearts(3);
         FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene(0);
         Destroy(gameObject);
     }
+
+
 
     public void UpdateFinalScore(){
         finalScoreText.text = "Final Score:" + (coins + (playerLives * 500));
